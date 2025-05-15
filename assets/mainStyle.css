@@ -1,0 +1,345 @@
+    :root {
+      --primary-color: #EAE4D5;
+      --secondary-color: #353535;
+      --background-color: #B6B09F;
+      --color-background: #000;
+      --hover-background: #fff;
+      --border-radius: 8px;
+      --font-family: Arial, sans-serif;
+      --font-size-base: 18px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--background-color);
+      background-blend-mode: lighten;
+      font-family: var(--font-family);
+      color: var(--secondary-color);
+      overflow-x: hidden;
+      font-size: var(--font-size-base);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: var(--color-background);
+      text-align: center;
+      padding: 32px 16px 0px 16px;
+    }
+
+    .upperHeader {
+      color: var(--primary-color);
+      font-size: 48px;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+    }
+
+    nav li {
+      margin: 16px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--primary-color);
+      font-size: 22px;
+      padding: 8px 16px;
+      transition: background-color 0.3s, color 0.3s;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      background-color: var(--hover-background);
+      color: var(--color-background);
+      border-radius: 5px;
+    }
+
+    .container,
+    .projects,
+    .aboutMe,
+    .skillsObtained,
+    .content {
+      max-width: 1200px;
+      margin: 32px auto;
+      padding: 32px;
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: visible;
+    }
+
+    .content {
+      background-color: var(--primary-color);
+      text-align: center;
+      color: var(--secondary-color);
+    }
+
+    .container,
+    .projects,
+    .aboutMe,
+    .skillsObtained {
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+    }
+
+
+    .aboutMe {
+      background-color: #000;
+      border-radius: 5px;
+    }
+
+    .projects,
+    .skillsObtained {
+      background-color: #000;
+    }
+
+    .font {
+      overflow: visible;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    .welcome h1 {
+      font-size: 48px;
+      margin-bottom: 30px;
+    }
+
+    .myPhoto {
+      width: 200px;
+      height: 220px;
+      border-radius: 50%;
+      margin: 0 auto 30px;
+      border: 3px solid var(--primary-color);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      object-fit: cover;
+      transition: ease-in-out  0.3s;
+    }
+
+    .myPhoto:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+
+    .skillsList {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .select {
+      background: var(--primary-color);
+      color: var(--color-background);
+      padding: 12px 20px;
+      border-radius: var(--border-radius);
+      transition: background-color 0.3s, color 0.3s, transform 0.3s;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .select:hover {
+      background-color: var(--color-background);
+      color: var(--primary-color);
+      transform: scale(1.1);
+    }
+
+    .projects video,
+    .calendar {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .calendar {
+      border-radius: 15px;
+    }
+
+    .carousel {
+      width: 100%;
+      max-width: 1000px;
+      margin: 30px auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mySlides {
+      width: 100%;
+      height: 400px;
+      display: none;
+      object-fit: cover;
+      border-radius: 15px;
+      transition: transform 0.3s;
+    }
+
+    .mySlides:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+
+    .top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: 2rem;
+      line-height: 50px;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      user-select: none;
+      z-index: 1000;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      text-decoration: none;
+    }
+
+    .top:hover {
+      background-color: var(--color-background);
+      color: var(--primary-color);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+    }
+
+
+    mark {
+      background-color: var(--background-color);
+      padding: 4px 6px;
+      border-radius: 6px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .upperHeader {
+        font-size: 40px;
+      }
+      nav ul {
+        flex-direction: column;
+      }
+      nav a {
+        font-size: 22px;
+      }
+      .myPhoto {
+        width: 180px;
+        height: 200px;
+      }
+      .welcome h1 {
+        font-size: 40px;
+      }
+      .select {
+        font-size: 16px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .upperHeader {
+        font-size: 32px;
+      }
+      .welcome h1 {
+        font-size: 29px;
+      }
+      .select {
+        padding: 8px 16px;
+        font-size: 16px;
+      }
+      .skillsList {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      animation: fadeIn 0.4s;
+    }
+
+    .modal-content {
+      position: fixed;
+      bottom: 0;
+      background-color: var(--hover-background);
+      color: var(--color-background);
+      width: 100%;
+      animation: slideIn 0.4s;
+    }
+
+    .modal-header {
+      padding: 10px 20px;
+      background-color: var(--color-background);
+      color: var(--primary-color);
+    }
+
+    .modal-body {
+      padding: 20px;
+    }
+
+    .close {
+      color: var(--primary-color);
+      float: right;
+      font-size: 32px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: var(--secondary-color);
+      text-decoration: none;
+    }
+
+    @keyframes slideIn {
+      from {
+        bottom: -400px;
+        opacity: 0;
+      }
+      to {
+        bottom: 0;
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+img {
+  width: 100%; 
+  height: auto;
+  object-fit: cover; 
+  border-radius: 15px; 
+}
+
+.box {
+  padding-bottom:0px;
+  margin-bottom:200px;
+}

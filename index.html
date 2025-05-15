@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <meta name="keywords" content="HTML, CSS, JavaScript" >
+  <meta name="author" content="Jose Zedrek A. Labares" >
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="assets/mainStyle.css" >
+</head>
+<body style="background-image: url('assets/picture/set-hand-drawn-graphic-designer-600nw-2363835691.webp') ">
+  <header>
+    <div class="upperHeader" id="top">
+      <p>MY PORTFOLIO</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Profile</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skill">Training</a></li>
+        <li><a href="#project">Project</a></li>
+        <li><a id="contacts">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="content">
+    <div class="welcome">
+      <h1 id="home">Welcome to My Portfolio</h1>
+      <div class="container">
+        <img src="assets/picture/zed.jpeg" alt="Myphoto" class="myPhoto" >
+        <div class="aboutMe">
+          <h2>About Me</h2>
+          <p style="margin-bottom: 20px;">
+            Hi! I'm Jose Zedrek A. Labares, a tech enthusiast and college student currently studying at CITE Institute Inc. I’m passionate about building, breaking, and debugging things—usually in that order.
+          </p>
+          <p>You can download my "<a href="assets/Files/RESUME-Labares-Jose-Zedrek.pdf" download="RESUME-Labares-Jose-Zedrek.jpeg">Resume</a>" here.</p>
+          <p style="margin-bottom: 20px;">
+            I enjoy diving into code, exploring new technologies, and figuring out how stuff works (or why it suddenly doesn’t). From front-end design to back-end logic, I’m always looking to level up my skills and take on new challenges.
+          </p>
+          <p style="margin-bottom: 20px;">
+            Currently fluent in HTML, CSS, and a growing number of programming languages. Working toward becoming the kind of developer who writes code that works... and makes sense six months later.
+          </p>
+          <p style="margin-bottom: 20px;">
+            Always learning. Sometimes compiling. Rarely sleeping.
+          </p>
+        </div>
+        <section aria-label="Newest Photo">
+        <div class="carousel">
+          <img src="assets/picture/WHAT-IS-WEB-DESIGN.avif" alt="Image1" class="mySlides" onclick="window.location.href='#skill'" >
+          <img src="assets/picture/12-principles-of-animation.jpg" alt="Image2" class="mySlides" onclick="window.location.href='#skill'" >
+          <img src="assets/picture/computer-hardware-installation-services-500x500-1.jpg" alt="Image3" class="mySlides" onclick="window.location.href='#skill'" >
+        </div>
+      </section>
+      </div>
+      <div class="container" id="education" style="margin-top: 200px;">
+        <div class="aboutMe">
+          <h2>Education</h2>
+          <p style="margin-bottom: 10px;">
+            I am currently pursuing foundational training in Information Technology at CITE Technical Institute, Inc., where I am gaining hands-on experience in areas such as computer systems, networking, programming, and IT support.          
+          </p>
+          <p style="margin-bottom: 30px;">
+            I am currently enrolled at CITE Technical Institute, Inc., where I’m building a solid foundation in Information Technology with practical skills in hardware troubleshooting, network configuration, basic programming (e.g., Python, Java), and IT support systems.
+           </p>
+          <h2>Training</h2>
+          <p>
+            I am currently undergoing training in web development, focusing on front-end technologies including HTML, CSS, and JavaScript, with an emphasis on building responsive, interactive, and user-friendly websites
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" style="margin-top: 200px;">
+      <div class="skillsObtained" id="skill">
+        <h2>Training/immersion</h2>
+        <ul class="skillsList">
+          <li class="select" onclick="window.location.href='#css'">CSS</li>
+          <li class="select" onclick="window.location.href='#animation'">Animation</li>
+          <li class="select" onclick="window.location.href='#techsupp'">TechSupport </li>
+        </ul>
+      </div>
+      <div class="aboutMe" >
+        <h2 id="css">CSS (hardware)</h2>
+        <p>
+          I gained hands-on experience in disassembling and assembling computer hardware during my training at CITE Institute Inc. Additionally, I earned my NC II certification in Computer Systems Servicing (CSS), equipping me with the technical skills to troubleshoot, maintain, and optimize computer systems.
+        </p>
+      </div>
+      <img src="assets/picture/computer-hardware-installation-services-500x500-1.jpg" alt="training" >
+      <div class="aboutMe">
+        <h2 id="animation">Animation</h2>
+        <p>
+          I've started learning animation fundamentals and currently use Blender as my primary software. So far, I've explored keyframe-based animation and basic rigging, and I'm gradually diving into more advanced features like the Graph Editor, procedural animations, and physics simulations.
+        </p>
+      </div>
+      <img src="assets/picture/12-principles-of-animation.jpg" alt="training2" >
+      <div class="aboutMe">
+        <h2 id="techsupp">Tech support (current immersion)</h2>
+        <p>
+          I'm currently working as a Tech Support Specialist at Alliance, actively undergoing training and immersion to enhance my technical skills and product knowledge.
+        </p>
+      </div>
+      <img src="assets/picture/banner-allliance-1786x642-2023.webp" alt="training3" >
+
+      <div class="projects" id="project" style="margin-top: 200px;">
+        <h2><b>Projects</b></h2>
+      </div>
+      <div class="font">
+        <div class="projects">
+          <h2>
+            SHORT VIDEO ANIMATION
+          </h2>
+          <video width="400" controls>
+            <source src="assets/video/sketch.mp4" type="video/mp4" >
+            <source src="assets/video/sketch.mp4" type="video/ogg" >
+            Your browser does not support HTML video.
+          </video>
+          <p>I once managed a project to make a video animtion for our school.</p>
+          <p> video sample of our animation</p>
+        </div>
+
+        <div class="projects">
+          <h2>
+            A SIMPLE WEBSITE CALENDAR
+          </h2>
+          <img src="assets/picture/Calendar.png" alt="project" >
+          <p>A sample of calendar project</p>
+        </div>
+
+        <!--modal--> 
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="close">&times;</span>
+              <h2>My Contacts</h2>
+            </div>
+            <div class="modal-body">
+              <p>Contact# 09270797896 </p>
+              <p>Email: zedreklabares2@gmail.com</p>
+              <p>fb: <a href="https://www.facebook.com/ZedLabares">zed labares</a></p>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div> 
+  </div>
+
+  <a href="#top" class="top" aria-label="Scroll to top">↑</a>
+  <script src="assets/Carosel.JS"></script>
+
+</body>
+</html>
+

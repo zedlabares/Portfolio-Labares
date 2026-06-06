@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Jose Zedrek A. Labares — IT student, web developer, and tech enthusiast.">
+  <meta name="keywords" content="HTML, CSS, JavaScript, Portfolio, Web Development">
+  <meta name="author" content="Jose Zedrek A. Labares">
+  <title>Zedrek Labares — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/mainStyle.css">
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header id="top">
+    <div class="header-inner">
+      <a href="#top" class="logo" aria-label="Home">ZL</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#home">Profile</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skill">Training</a></li>
+          <li><a href="#project">Projects</a></li>
+          <li><a href="#" id="contacts" aria-haspopup="dialog">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== MAIN ========== -->
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" id="home" aria-label="Profile">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="hero-eyebrow">Hello, I'm</p>
+          <h1>Jose Zedrek<br><em>Labares</em></h1>
+          <p class="hero-sub">IT student · Web developer · Tech support specialist</p>
+          <div class="hero-actions">
+            <a href="assets/Files/RESUME-Labares-Jose-Zedrek.pdf" download="RESUME-Labares-Jose-Zedrek.pdf" class="btn btn-primary">Download Résumé</a>
+            <a href="#project" class="btn btn-ghost">View Projects</a>
+          </div>
+        </div>
+        <div class="hero-photo-wrap">
+          <img src="assets/picture/zed.jpeg" alt="Photo of Jose Zedrek Labares" class="myPhoto" width="260" height="286">
+          <div class="hero-photo-ring" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carousel strip -->
+    <section class="carousel-section" aria-label="Training highlights">
+      <div class="carousel" aria-live="polite">
+        <img src="assets/picture/WHAT-IS-WEB-DESIGN.avif" alt="Web Design" class="mySlides" loading="lazy" onclick="window.location.href='#skill'">
+        <img src="assets/picture/12-principles-of-animation.jpg" alt="Animation Principles" class="mySlides" loading="lazy" onclick="window.location.href='#skill'">
+        <img src="assets/picture/computer-hardware-installation-services-500x500-1.jpg" alt="Computer Hardware" class="mySlides" loading="lazy" onclick="window.location.href='#skill'">
+      </div>
+      <div class="carousel-dots" aria-hidden="true">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section about-section" id="about" aria-label="About me">
+      <div class="section-inner two-col">
+        <div class="about-text">
+          <h2 class="section-title">About Me</h2>
+          <p>Hi! I'm a tech enthusiast and college student currently studying at CITE Institute Inc. I'm passionate about building, breaking, and debugging things — usually in that order.</p>
+          <p>I enjoy diving into code, exploring new technologies, and figuring out how stuff works (or why it suddenly doesn't). From front-end design to back-end logic, I'm always looking to level up my skills.</p>
+          <p>Currently fluent in HTML, CSS, and a growing number of programming languages. Working toward writing code that works <em>and</em> makes sense six months later.</p>
+          <p class="about-tagline">Always learning. Sometimes compiling. Rarely sleeping.</p>
+        </div>
+        <aside class="about-stats" aria-label="Quick stats">
+          <div class="stat-card">
+            <span class="stat-value">NC II</span>
+            <span class="stat-label">CSS Certified</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">3+</span>
+            <span class="stat-label">Technologies</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">Live</span>
+            <span class="stat-label">Tech Support Immersion</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section" id="education" aria-label="Education">
+      <div class="section-inner">
+        <h2 class="section-title">Education &amp; Training</h2>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-body">
+              <h3>Information Technology</h3>
+              <p class="timeline-org">CITE Technical Institute, Inc.</p>
+              <p>Gaining hands-on experience in computer systems, networking, programming, and IT support. Building practical skills in hardware troubleshooting, network configuration, basic programming (Python, Java), and IT support systems.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-body">
+              <h3>Web Development Training</h3>
+              <p class="timeline-org">CITE Technical Institute, Inc.</p>
+              <p>Undergoing training in web development with a focus on front-end technologies including HTML, CSS, and JavaScript, with an emphasis on building responsive, interactive, and user-friendly websites.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills / Training -->
+    <section class="section" id="skill" aria-label="Training and skills">
+      <div class="section-inner">
+        <h2 class="section-title">Training / Immersion</h2>
+        <div class="skills-grid">
+
+          <article class="skill-card" id="css">
+            <img src="assets/picture/computer-hardware-installation-services-500x500-1.jpg" alt="Computer hardware training" loading="lazy" class="skill-img">
+            <div class="skill-body">
+              <h3>CSS — Computer Systems Servicing</h3>
+              <p>Hands-on experience disassembling and assembling computer hardware at CITE Institute Inc. Earned NC II certification in Computer Systems Servicing, equipping me with skills to troubleshoot, maintain, and optimize computer systems.</p>
+            </div>
+          </article>
+
+          <article class="skill-card" id="animation">
+            <img src="assets/picture/12-principles-of-animation.jpg" alt="Animation principles" loading="lazy" class="skill-img">
+            <div class="skill-body">
+              <h3>Animation</h3>
+              <p>Learning animation fundamentals using Blender as my primary software. Explored keyframe-based animation and basic rigging, and gradually diving into the Graph Editor, procedural animations, and physics simulations.</p>
+            </div>
+          </article>
+
+          <article class="skill-card" id="techsupp">
+            <img src="assets/picture/banner-allliance-1786x642-2023.webp" alt="Alliance tech support" loading="lazy" class="skill-img">
+            <div class="skill-body">
+              <h3>Tech Support — Alliance (Current)</h3>
+              <p>Currently working as a Tech Support Specialist at Alliance, actively undergoing training and immersion to enhance my technical skills and product knowledge.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="project" aria-label="Projects">
+      <div class="section-inner">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+
+          <article class="project-card">
+            <div class="project-media">
+              <video width="400" controls preload="metadata" aria-label="Short video animation project">
+                <source src="assets/video/sketch.mp4" type="video/mp4">
+                Your browser does not support HTML video.
+              </video>
+            </div>
+            <div class="project-body">
+              <h3>Short Video Animation</h3>
+              <p>Managed and produced a short video animation project for school, covering the full pipeline from storyboard to final render.</p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/picture/Calendar.png" alt="Screenshot of calendar web app project" loading="lazy" class="project-img">
+            </div>
+            <div class="project-body">
+              <h3>Simple Website Calendar</h3>
+              <p>A fully interactive calendar built with vanilla HTML, CSS, and JavaScript — one of my earliest front-end projects.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="footer-inner">
+      <p>&copy; 2025 Jose Zedrek A. Labares</p>
+      <p class="footer-links">
+        <a href="https://www.facebook.com/ZedLabares" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="mailto:zedreklabares2@gmail.com">Email</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ========== CONTACT MODAL ========== -->
+  <div id="myModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modal-title">Get in Touch</h2>
+        <button class="close" aria-label="Close contact modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <ul class="contact-list">
+          <li><span class="contact-label">Phone</span><a href="tel:09270797896">09270797896</a></li>
+          <li><span class="contact-label">Email</span><a href="mailto:zedreklabares2@gmail.com">zedreklabares2@gmail.com</a></li>
+          <li><span class="contact-label">Facebook</span><a href="https://www.facebook.com/ZedLabares" target="_blank" rel="noopener noreferrer">zed labares</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll to top -->
+  <a href="#top" class="top" aria-label="Scroll to top">&#8593;</a>
+
+  <script src="assets/Carosel.JS"></script>
+</body>
+</html>

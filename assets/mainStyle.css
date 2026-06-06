@@ -95,7 +95,8 @@ img { display: block; width: 100%; height: auto; }
   font-weight: 500;
   letter-spacing: 0.02em;
   cursor: pointer;
-  transition: background var(--transition), color var(--transition), transform var(--transition);
+  /* background/color trigger paint; transform is compositor-only — keep them separate */
+  transition: background var(--transition), color var(--transition);
   text-decoration: none;
 }
 .btn-primary {
@@ -107,6 +108,7 @@ img { display: block; width: 100%; height: auto; }
   background: var(--amber-light);
   color: var(--charcoal);
   transform: translateY(-2px);
+  transition: background var(--transition), color var(--transition), transform var(--transition);
 }
 .btn-ghost {
   background: transparent;
@@ -116,6 +118,7 @@ img { display: block; width: 100%; height: auto; }
 .btn-ghost:hover {
   background: var(--charcoal-soft);
   transform: translateY(-2px);
+  transition: background var(--transition), transform var(--transition);
 }
 
 /* ============================================================
@@ -241,7 +244,15 @@ nav a:hover {
   border-radius: 50%;
   border: 1px dashed rgba(212,134,10,0.35);
   z-index: 0;
-  animation: spin 20s linear infinite;
+}
+
+/* Only animate for users who haven't requested reduced motion.
+   will-change pre-promotes the element so the first frame doesn't stutter. */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-photo-ring {
+    will-change: transform;
+    animation: spin 20s linear infinite;
+  }
 }
 
 @keyframes spin { to { transform: rotate(360deg); } }
@@ -389,12 +400,16 @@ nav a:hover {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: border-color var(--transition), transform var(--transition);
+  /* border-color triggers repaint; transform is compositor-only — separate them */
+  transition: border-color var(--transition);
   box-shadow: var(--shadow-card);
+  /* Pre-promote so hover layer creation doesn't drop a frame */
+  will-change: transform;
 }
 .skill-card:hover {
   border-color: rgba(212,134,10,0.4);
   transform: translateY(-3px);
+  transition: border-color var(--transition), transform var(--transition);
 }
 
 .skill-img {
@@ -425,11 +440,13 @@ nav a:hover {
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-card);
-  transition: border-color var(--transition), transform var(--transition);
+  transition: border-color var(--transition);
+  will-change: transform;
 }
 .project-card:hover {
   border-color: rgba(212,134,10,0.4);
   transform: translateY(-3px);
+  transition: border-color var(--transition), transform var(--transition);
 }
 
 .project-media { background: var(--charcoal-soft); }

@@ -42,6 +42,19 @@
     });
   }
 
+  // Fix 4: Pause when tab is hidden; resume when visible again.
+  // Prevents the interval from firing (and wasting CPU/battery) in the background.
+  document.addEventListener("visibilitychange", function () {
+    if (document.hidden) {
+      clearInterval(timer);
+    } else {
+      // Only restart if the carousel el isn't currently hovered
+      if (!carouselEl || !carouselEl.matches(":hover")) {
+        timer = setInterval(nextSlide, 3000);
+      }
+    }
+  });
+
   /* ---------- Modal ---------- */
   var modal  = document.getElementById("myModal");
   var openBtn = document.getElementById("contacts");

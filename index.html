@@ -6,6 +6,7 @@
   <meta name="description" content="Portfolio of Jose Zedrek A. Labares — IT student, web developer, and tech enthusiast.">
   <meta name="keywords" content="HTML, CSS, JavaScript, Portfolio, Web Development">
   <meta name="author" content="Jose Zedrek A. Labares">
+  <meta name="theme-color" content="#1A1A18">
   <title>Zedrek Labares — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +21,11 @@
   <header>
     <div class="header-inner">
       <a href="#top" class="logo" aria-label="Home">ZL</a>
-      <nav aria-label="Main navigation">
+      <!-- Mobile menu button: hidden on desktop, and only shown when JavaScript is running -->
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation menu">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+      <nav id="site-nav" aria-label="Main navigation">
         <ul>
           <li><a href="#home">Profile</a></li>
           <li><a href="#education">Education</a></li>
